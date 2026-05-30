@@ -1,0 +1,383 @@
+body {
+  background-color: rgb(37, 36, 36);
+  margin: 0;
+}
+
+
+@font-face {
+    font-family: 'Betania';
+    src: url("BetaniaPatmos-Regular.ttf");
+}
+.header h1{
+    
+    
+   margin-right:100px;
+    color:rgb(247, 232, 232);
+    font-family: 'Betania';
+    -webkit-background-clip:text;
+    text-align:center;
+    /* -webkit-text-fill-color:transparent; */
+    animation: neon1 10s ease-in-out 0s infinite alternate;
+    
+    
+}
+.header{
+    background:linear-gradient(to right ,rgb(233, 60, 227)
+    ,rgb(14, 207, 191));
+    width:100%;
+    height: 100px;
+    text-align: center;
+    border-radius:60px;
+    border-style: double;
+    border-color:  rgb(186, 4, 140);
+    border-width: 1px;
+    box-shadow: 0 0 10px #54033c ,  0 0 20px pink;
+}
+
+@keyframes neon1 {
+  from {
+    color:transparent;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #dd15c2,
+      0 0 70px #780765, 0 0 80px #cb1dd1, 0 0 100px #b2087f, 0 0 150px #c917ed;
+  }
+  to {
+    color:antiquewhite;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #a98da4, 0 0 40px #c22a97, 0 0 50px #c90d8d, 0 0 75px #c614dd;
+  }
+}
+@font-face {
+    font-family: 'great';
+    src: url("GreatVibes-Regular.ttf");
+}
+.timer{
+    background-color: #dabdd5;
+    width: 1000px;
+    height:500px;
+    margin-top:100px;
+    border-radius:100px;
+    box-shadow:0 0 50px #780765;
+    text-align: center;
+    border-color:#b2087f;
+    border-width:2px;
+    border-style:solid;
+    
+    
+    
+    
+}
+.time{
+
+    display:flex;
+    gap:60px;
+    margin-left:30px;
+    
+    
+}
+.timer h1{
+    font-family: 'Betania';
+    background:linear-gradient(to right , rgb(220, 36, 168),rgb(142, 3, 87));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    text-shadow: 0 0 10px pink;
+    text-decoration-line: underline;
+    padding-top:10px;
+    
+    
+    
+    
+}
+.drop{
+    background-color: #a3bfe4;
+    width: 400px;
+    height:500px;
+    margin-top:100px;
+    border-radius:100px;
+    box-shadow:0 0 50px #780765;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    border-width:2px;
+    border-color:#60e7e0;
+    border-style:solid;
+    
+}
+.drop h1{
+    font-family: 'Betania';
+    color:#0990d3;
+    text-shadow: 0 0 20px rgb(253, 251, 252);
+    text-decoration-line: underline;
+    
+}
+.selected{
+    background-color: #1df2f9;
+    color: rgb(109, 21, 234);
+    text-decoration-color: #780765;
+    text-shadow:0 0 10px #dabdd5;
+    border-radius: 20px;
+    width:320px;
+    height:30px;
+    font-family: 'Betania';
+    margin-left:25px;
+    text-align: center;
+    padding:10px;
+    border-width:2px;
+    border-color: wheat;
+    border-style: solid;
+    
+    
+    
+
+
+}
+.menu{
+    background-color: transparent;
+    color: rgb(35, 122, 244);
+    text-decoration-color: #35adea;
+    text-shadow:0 0 10px #f2ebf1;
+    border-radius: 20px;
+    width:350px;
+    height:200px;
+    font-family: 'Betania';
+    margin-left:25px;
+
+    
+    
+}
+.item{
+    background-color:#60bae7;
+    color:#dabdd5;
+    height:40px;
+    border-radius: 15px;
+    border-color: #f6eff5;
+    border-width:20px;
+    margin-top:10px;
+    box-shadow: 0 0 10px #f0f0f0;
+
+
+
+}
+.item button{
+    background-color:#60e7e0;
+    color:#81c0f4;
+    border-color:#60afe7 ;
+    border-radius:20px;
+    margin-bottom: 5px;
+    font-family: 'cousine';
+    width:200px;
+    padding:5px;
+    -webkit-background-clip:text;
+    /* -webkit-text-fill-color:transparent; */
+    animation: neon1 10s  0s ease infinite alternate-reverse;
+    
+
+}
+.clock{
+    background-color:rgb(252, 151, 245);
+    border-radius: 100%;
+    width:370px;
+    height:370px;
+    margin:30px auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:0 0 20px rgb(238, 163, 238);
+    position: relative;
+   
+    bottom:3px;
+    
+    
+
+    
+}
+
+.inner{
+    background-image:url("♡ Pink Clock icon.jpg");
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    border-radius: 100%;
+    width:340px;
+    height:340px;
+    border-color: #780765;
+    border-width:5px;
+    border-style: solid;
+    box-shadow:0 0 20px purple;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    
+
+
+}
+.digital-timer{
+    
+    
+    background-color:#b2087f;
+    width:200px;
+    height: 100px;
+    border-radius: 50px;
+    border-color:pink;
+    border-width:10px;
+    border-style:double;
+    
+    
+
+
+}
+@font-face {
+    font-family: 'cousine';
+    src: url('Cousine-Regular.ttf');
+}
+.timeinvalue{
+    font-family: 'cousine';
+    font-size: 60px;
+    color:#dabdd5;
+    margin-top:30px;
+}
+.playbutton button{
+    background-image:url("play-button_6241826.png");
+    background-size: cover;
+    border-radius: 100%;
+    width:70px;
+    height:70px;
+    border-color: #a98da4;
+    border-width:5px;
+    border-style: solid;
+    margin-top:55px;
+    box-shadow:0 0 5px black, 0 0 10px rgb(10, 176, 241);
+    transition:0.1s;
+    
+}
+.playbutton button:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+
+
+.playbutton button:active{
+    
+    transform: scale(0.92);
+    filter: brightness(0.8);
+    filter: blur(1px);
+    
+    
+    
+}
+
+.taskbar{
+    margin-top:100px;
+    margin-left:120px;
+    background-color: #60afe7;
+    border-radius:50px;
+    width:85%;
+    height:900px;
+    border-width:2px;
+    border-color:#60e7e0;
+    border-style:solid;
+    box-shadow:0 0 10px #0990d3;
+    
+
+
+    
+}
+.taskbarheading h1{
+    color:#1df2f9;
+    font-family:'Betania';
+    font-size:80px;
+    margin-left:100px;
+    text-shadow:0 0 10px rgb(10, 176, 241), 0 0 20px whitesmoke;
+   
+}
+.journal-section{
+    background-color: beige;
+    width:50%;
+    height:600px;
+    border-radius:30px;
+    border-style: solid;
+    border-color: #a98da4;
+    border-width:2px;
+    box-shadow:0 0 10px bisque;
+
+    
+
+}
+.to-do{
+    background-color: beige;
+    width:50%;
+    height:600px;
+    border-radius:30px;
+    border-style: solid;
+    border-color: #a98da4;
+    border-width:2px;
+    box-shadow:0 0 10px bisque;
+
+    
+    
+
+    
+}
+.to-do h1{
+    color:rgb(60, 60, 229);
+    font-family: 'Betania';
+    font-size:50px;
+    text-shadow:0 0 10px #60e7e0;
+    margin-left:50px;
+}
+
+.journal-section h1{
+    color:rgb(60, 60, 229);
+    font-family: 'Betania';
+    font-size:50px;
+    text-shadow:0 0 10px #60e7e0;
+    margin-left:50px;
+}
+.sections{
+    display:flex;
+    flex-direction:row;
+    align-items: flex-start;
+    gap:50px;
+    padding:40px;
+    position:relative;
+    bottom:20px;
+    
+
+}
+.journal-section textarea{
+    width:85%;
+    height:400px;
+    margin-left:30px;
+    margin-top:20px;
+    font-size:20px;
+    font-family:'Betania';
+
+    padding:5px;
+
+    border-radius:20px;
+
+    background-color:#e4ecee;
+    line-height:40px;
+
+    background-image:
+    linear-gradient(to bottom,
+    transparent 39px,
+    #02142b 40px);
+
+    background-size:100% 40px;
+    position: relative;
+    bottom:30px;
+    border-color:#1df2f9;
+    border-width:2px;
+    border-style: solid;
+
+}
+
+.date{
+    color:blue;
+    font-family:'cousine';
+    margin-left:440px;
+    margin-bottom:10px;
+}

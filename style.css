@@ -1,0 +1,226 @@
+body {
+  background-color: rgb(6, 30, 101);
+  margin: 0;
+}
+@font-face {
+  font-family: 'Betania';
+  src: url('BetaniaPatmos-Regular.ttf');
+}
+.headingbox h1{
+ 
+  color: rgb(247, 232, 232);
+  font-family:'Betania';
+  font-weight: lighter;
+  font-size: 100px;
+  text-align:center;
+  margin-right: 600px;
+  background: linear-gradient(to right, rgb(230,225,150), white , pink );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:rgb(249, 224, 192);
+  text-shadow: 0 0 10px rgba(65, 63, 63, 0.5);
+  animation: neon1 5s ease-in-out infinite alternate;
+  
+  
+
+  
+  
+  
+}
+
+
+
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #dd15c2,
+      0 0 70px #780765, 0 0 80px #cb1dd1, 0 0 100px #b2087f, 0 0 150px #c917ed;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #a98da4, 0 0 40px #c22a97, 0 0 50px #c90d8d, 0 0 75px #c614dd;
+  }
+}
+.Overview p{
+  color: rgb(8, 8, 8);
+  font-size: 50px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 100px;
+  display:inline-table;
+  text-shadow: 0 0 20px #d8ac1a;
+  
+}
+.Overview{
+  background-color: bisque;
+  width:100%;
+  height: 400px;
+  
+  border-color:rgba(191, 33, 194, 0.3);
+  border-style: double;
+  border-width: 10px;
+  box-shadow:0 0 50px #780765,
+  0 0 100px rgb(175, 18, 219);
+  border-radius: 50px;
+
+
+
+  
+}
+.button button{
+ 
+  padding: 20px;
+  background-color: rgb(31, 29, 29);
+  font-family:'Betania';
+  font-style: oblique;
+  font-size:small;
+  font-weight: lighter;
+  color: #fff;
+  text-shadow: 0 0 10px rgb(249, 224, 192);
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgb(75, 70, 70), 0 0 10px rgb(230,225,150);
+  width: 100px;
+  
+}
+.button button:hover{
+  background-color: #373538;
+}
+.button{
+  display: flex;
+  padding-right: 20px;
+  gap:20px;
+  
+
+
+  
+}
+.sign{
+
+  display: flex;
+  gap:50px;
+  background-color: #b9bae6;
+  width:100%;
+  
+  padding:10px;
+  margin-bottom: 70px;
+  box-shadow:0 0 5px rgb(76, 75, 61),
+  0 0 10px rgb(230,225,150), 0 0 20px rgb(249, 224, 192);
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+  
+
+}
+.drops p{
+  
+  display: inline;
+  font-family: 'Betania';
+  
+  
+
+}
+.drops{
+   display:flex;
+   gap:50px;
+   margin-left:40px;
+}
+.explore button{
+  background-color: #b2087f;
+  color:#e2d7e0;
+  border-radius: 50px;
+  border-width: 5px;
+  text-shadow: 0 0 5px pink;
+  font-size: large;
+  font-family: 'Betania';
+  width:500px;
+  height:50px;
+}
+.explore button:hover{
+   background-color:rgb(202, 35, 63);
+}
+.explore{
+  text-align: center;
+  margin-top:50px;
+  margin-bottom:50px;
+
+  
+}
+.drops a{
+  color:#780765;
+  text-shadow: 0 0 10px white;
+
+}
+
+.menu-item{
+  position: relative;
+  font-family: 'Betania';
+
+  
+  
+}
+
+.Timer{
+  display: none;
+  position:absolute;
+  top:40px;
+  background-color: wheat;
+  padding:20px;
+  width:300px;
+  border-radius:20px;
+  box-shadow: 0 0 10px rgb(6,30,101);
+}
+
+.menu-item:hover .Timer{
+  display:block;
+  margin-top:10px;
+}
+
+.menu-item1{
+  position: relative;
+  font-family: 'Betania';
+
+  
+  
+}
+
+.Tasks{
+  display: none;
+  position:absolute;
+  top:40px;
+  background-color: wheat;
+  padding:20px;
+  width:300px;
+  border-radius:20px;
+  box-shadow: 0 0 10px rgb(6,30,101);
+}
+
+.menu-item1:hover .Tasks{
+  display:block;
+  margin-top:10px;
+}
+.menu-item2{
+  position: relative;
+  display: inline-block;
+  font-family: 'Betania';
+}
+
+.Play{
+  display: none;
+  position:absolute;
+  top:40px;
+  background-color: wheat;
+  padding:20px;
+  width:300px;
+  border-radius:20px;
+  box-shadow: 0 0 10px rgb(6,30,101);
+}
+
+.menu-item2:hover .Play{
+  display:block;
+  margin-top:10px;
+}
+
+.Play{
+  z-index: 1000;
+}
+
+
+
