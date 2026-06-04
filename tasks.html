@@ -51,12 +51,30 @@
     <div class="taskbar"><div class="taskbarheading"><h1>Task-Log</h1></div>
         <div class="sections">
             <div class="journal-section"><h1>Journal</h1>
-                <div class="date">
+                <div class="date" id="date">
                     29-05-26
                 </div>
-                <textarea></textarea>
+                <textarea class="textPlace"></textarea>
             </div>
-            <div class="to-do"><h1>to-do List</h1></div>
+            <div class="to-do"><h1>to-do List</h1>
+            <button onclick="
+                addText();
+                resetText();
+                dropList();
+                
+
+                " 
+                class="addButton">Add</button>
+            <button onclick="
+                resetList();
+            " class="resetButton">Reset</button>
+            
+            <input placeholder="Lets do it!!Press enter to add it." class="text" >
+            <div class="to-doList"></div>
+            
+            
+            
+        </div>
         </div>
         
     </div>

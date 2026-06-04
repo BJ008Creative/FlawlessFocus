@@ -294,7 +294,7 @@ body {
 }
 .journal-section{
     background-color: beige;
-    width:50%;
+    width:60%;
     height:600px;
     border-radius:30px;
     border-style: solid;
@@ -307,7 +307,7 @@ body {
 }
 .to-do{
     background-color: beige;
-    width:50%;
+    width:40%;
     height:600px;
     border-radius:30px;
     border-style: solid;
@@ -380,4 +380,73 @@ body {
     font-family:'cousine';
     margin-left:440px;
     margin-bottom:10px;
+}
+.resetButton{
+    background-color: antiquewhite;
+    width:100px;
+    height:50px;
+    border-radius: 20px;
+}
+.addButton{
+     background-color: antiquewhite;
+    width:100px;
+    height:50px;
+    border-radius: 20px;
+    margin-left:17px;
+
+}
+.text{
+    background-color: rgb(249, 249, 178);
+    width:200px;
+    height:30px;
+    border-radius: 20px;
+    padding:10px;
+    color:#00070f;
+}
+.to-doList p{
+    background-color: rgb(155, 220, 250);
+    width:60%;
+    height:90%;
+    margin-left:5px;
+    padding:5px;
+    border-radius:10px;
+    border-color:#00070f;
+    box-shadow:0 0 10px rgb(252, 193, 193);
+    border-style:solid;
+    border-width:2px;
+    
+
+}
+.ListButton{
+    width:40px;
+    height:40px;
+    background-image:url("delete.png");
+    background-size:cover;
+    background-color: red;
+    border-radius:10px;
+    margin-left:10px;
+    margin-top:10px;
+    color:transparent;
+    border-radius:20px;
+    
+}
+
+.dropsection{
+    display:flex;
+    margin-top:10px;
+    margin-left:10px;
+    gap:10px;
+    
+}
+.EditButton{
+    background-color: antiquewhite;
+    width:60px;
+    height:40px;
+    border-radius: 20px;
+    margin-top:10px;
+
+}
+.EditButton :active{
+    background-color: rgb(27, 226, 27);
+    transition: 5s;
 }

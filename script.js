@@ -101,3 +101,97 @@ playbutton.addEventListener("click", function () {
     }
 
 });
+let to_do= document.querySelector(".to-doList");
+let date = document.getElementById("date");
+let presentDate = new Date();
+date.innerHTML = presentDate.getDate() + "-" + (presentDate.getMonth()+1) +"-"+ presentDate.getFullYear();
+
+
+let todolist =
+    JSON.parse(localStorage.getItem("tasks"))
+    || [];
+
+let text = document.querySelector(".text");
+function addText(){
+    
+    if(text.value.trim() === ""){
+        alert("Please enter a valid item");
+        return;
+    }
+    todolist.push(text.value);
+
+    localStorage.setItem(
+    "tasks",
+    JSON.stringify(todolist)
+    );
+    console.log(todolist);
+}
+function resetText(){
+    text.value="";
+}
+let i=0;
+
+function dropList(){
+
+    to_do.innerHTML = "";
+    
+    for(let i = 0; i < todolist.length; i++){
+
+        
+        
+            
+            to_do.innerHTML += `<div class="dropsection">
+            <button class="ListButton" onclick="
+             deleteButton(${i});
+             dropList();
+            ">X</button>
+            <button class="EditButton" onclick="
+                editButton(${i});
+            
+            ">Edit</button>
+            <p>${todolist[i]}</p> 
+            </div>`;
+        
+
+    }
+}
+        
+         
+
+    
+    
+       
+
+function resetList(){
+    todolist=[];
+    
+    localStorage.removeItem("tasks");
+    to_do.innerHTML="";
+    
+}
+function deleteButton(i){
+    todolist.splice(i,1);
+
+
+}
+function editButton(index){
+    
+
+    let newTask = (
+        "Edit your task:",
+        todolist[index]
+    );
+
+    if(newTask!==null){
+
+        todolist[index] = newTask;
+
+        localStorage.setItem(
+            "tasks",
+            JSON.stringify(todolist)
+        );
+
+        dropList();
+    }
+
+}
