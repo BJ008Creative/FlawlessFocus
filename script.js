@@ -118,7 +118,12 @@ function addText(){
         alert("Please enter a valid item");
         return;
     }
-    todolist.push(text.value);
+    todolist.push({
+    taskName: text.value,
+    date: presentDate.getDate() + "-" +
+          (presentDate.getMonth()+1) + "-" +
+          presentDate.getFullYear()
+    });
 
     localStorage.setItem(
     "tasks",
@@ -149,8 +154,9 @@ function dropList(){
                 editButton(${i});
             
             ">Edit</button>
-            <p>${todolist[i]}</p> 
+            <p>${todolist[i].taskName}</p> 
             </div>`;
+           
         
 
     }
@@ -161,7 +167,10 @@ function dropList(){
     
     
        
-
+let taskData={
+    taskName:"",
+    date:presentDate
+};
 function resetList(){
     todolist=[];
     
@@ -170,21 +179,24 @@ function resetList(){
     
 }
 function deleteButton(i){
+
     todolist.splice(i,1);
 
-
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(todolist)
+    );
 }
 function editButton(index){
-    
 
-    let newTask = (
+    let newTask = prompt(
         "Edit your task:",
-        todolist[index]
+        todolist[index].taskName
     );
 
-    if(newTask!==null){
+    if(newTask !== null){
 
-        todolist[index] = newTask;
+        todolist[index].taskName = newTask;
 
         localStorage.setItem(
             "tasks",
@@ -193,5 +205,150 @@ function editButton(index){
 
         dropList();
     }
+}
+dropList();
+let calendar = document.getElementById("calendar");
+
+calendar.addEventListener("change", function(){
+
+    let selectedDate = calendar.value;
+
+    let parts = selectedDate.split("-");
+
+    let formattedDate =
+        Number(parts[2]) + "-" +
+        Number(parts[1]) + "-" +
+        parts[0];
+
+    to_do.innerHTML = "";
+
+    let found = false;
+
+    for(let i = 0; i < todolist.length; i++){
+
+        if(todolist[i].date === formattedDate){
+
+            found = true;
+
+            to_do.innerHTML += `
+            <div class="dropsection">
+
+                <button class="ListButton" onclick="
+                    deleteButton(${i});
+                    dropList();
+                ">X</button>
+
+                <button class="EditButton" onclick="
+                    editButton(${i});
+                ">Edit</button>
+
+                <p>${todolist[i].taskName}</p>
+
+            </div>`;
+        }
+    }
+
+    if(!found){
+        to_do.innerHTML =
+        "<p style='margin-left:20px'>No tasks found for this date.</p>";
+    }
+});
+let dateData = document.querySelector(".dateList");
+
+function showDate(){
+
+    dateData.innerHTML = "";
+
+    for(let i = 0; i < todolist.length; i++){
+        
+
+        dateData.innerHTML += `
+            <button onclick="
+            hideDate();
+            showEvent(${i});
+            ">
+                
+                
+                ${todolist[i].date}
+            </button>
+        `;
+    }
+
+    dateData.style.display = "contents";
+    
 
 }
+function hideDate(){
+    dateData.innerHTML = "";
+    dateData.style.display = "none";
+}
+function showEvent(c){
+    to_do.innerHTML = "";
+    let fixedDate = todolist[c].date;
+    
+    
+    for(let i = 0; i < todolist.length; i++){
+
+        
+        if(todolist[i].date===fixedDate){
+            
+            to_do.innerHTML += `<div class="dropsection">
+            <button class="ListButton" onclick="
+             deleteButton(${i});
+             dropList();
+            ">X</button>
+            <button class="EditButton" onclick="
+                editButton(${i});
+            
+            ">Edit</button>
+            <p>${todolist[i].taskName}</p> 
+            </div>`;
+        }
+           
+        
+
+    }
+
+
+}
+let journal = document.querySelector(".textPlace");
+
+let journals =
+    JSON.parse(localStorage.getItem("journals"))
+    || {};
+let PresentDate = new Date();
+let currentJournalDate =
+    PresentDate.getDate() + "-" +
+    (PresentDate.getMonth()+1) + "-" +
+    PresentDate.getFullYear();
+journal.value = journals[currentJournalDate] || "";
+journal.addEventListener("input", function(){
+
+    journals[currentJournalDate] =
+        journal.value;
+
+    localStorage.setItem(
+        "journals",
+        JSON.stringify(journals)
+    );
+
+});
+let journalCalendar =
+    document.getElementById("journalCalendar");
+
+journalCalendar.addEventListener(
+    "change",
+    function(){
+
+        let parts =
+            journalCalendar.value.split("-");
+
+        currentJournalDate =
+            Number(parts[2]) + "-" +
+            Number(parts[1]) + "-" +
+            parts[0];
+
+        journal.value =
+            journals[currentJournalDate] || "";
+    }
+);
