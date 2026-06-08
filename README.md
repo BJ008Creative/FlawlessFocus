@@ -26,7 +26,7 @@ Flawless Focus is a productivity website built using HTML, CSS, and JavaScript.
 
 ## Future Improvements
 
-* Task editing and deletion
+
 * User authentication
 * Progress tracking
 * Music playlists integration
